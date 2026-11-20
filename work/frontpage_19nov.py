@@ -312,16 +312,16 @@ briefs = [
     ("32", "Gaza: Israeli ground operation continues."),
     ("33", "Riyadh hosts US CENTCOM talks; new Hezbollah finance sanctions."),
 ]
-brow = 13
+brow = 12
 for i, (num, txt) in enumerate(briefs):
     col, row = i % 2, i // 2
     bx2 = MX + col * (CW // 2 + 8)
-    by2 = BY + 26 + row * brow
+    by2 = BY + 24 + row * brow
     d.text((bx2, by2), num + ".", font=f(SANS_B, 10), fill=RED)
     d.text((bx2 + 24, by2), txt, font=f(SANS, 10), fill=INK)
 
 # ---------------------------------------------------------------- footer
-FY = 956
+FY = 960
 rule(d, MX, FY, W - MX, 2)
 # date check box
 d.rectangle([MX, FY + 8, MX + 470, FY + 58], fill=(255, 243, 205),
